@@ -15,10 +15,10 @@ public class UserServiceImplementation implements UserService {
         return userDao.saveUser(user);
     }
 
-    @Override
-    public int updateUser(User user) {
+  @Override
+  public int updateUser(User user){
         return userDao.updateUser(user);
-    }
+  }
 
     @Override
     public int deleteUser(int id) {

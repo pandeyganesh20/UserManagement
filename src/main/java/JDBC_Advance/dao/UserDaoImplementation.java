@@ -3,7 +3,7 @@ package JDBC_Advance.dao;
 import JDBC_Advance.model.User;
 import JDBC_Advance.util.QueryUtil;
 import JDBC_Advance.util.dbUtil;
-import org.graalvm.compiler.lir.LIRInstruction;
+
 
 import java.sql.Date;
 import java.sql.PreparedStatement;
@@ -87,7 +87,7 @@ public class UserDaoImplementation implements UserDao {
         try (
                 PreparedStatement ps = dbUtil.getConnection().prepareStatement(QueryUtil.GET_BY_ID_SQL);
         ) {
-
+ps.setInt(1,id);
             ResultSet rs = ps.executeQuery();
 
             if (rs.next()) {
